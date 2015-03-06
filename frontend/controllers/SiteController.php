@@ -12,6 +12,7 @@ use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+use common\models\ValueHelpers;
 
 /**
  * Site controller
@@ -113,6 +114,8 @@ class SiteController extends Controller
 
     public function actionAbout()
     {
+        //var_dump(Yii::$app->user->identity);
+
         return $this->render('about');
     }
 
